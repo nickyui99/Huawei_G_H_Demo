@@ -24,9 +24,11 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
+        //Checking signature
         checkSignature()
 
-
+        //Handling G+H Logic, you can call GMS services and HMS services respectively on GMS devices and HMS devices
+        //Error handling is recommended to prevent app failure
         if(GH.isHmsAvailable()) {
             //Logic for HMS
         } else if(

@@ -57,6 +57,11 @@ class GmsHmsAvailability(private val context: Context) {
     }
 
     private fun isSignatureValid(appSignature: ByteArray, googleSignature: ByteArray) : Boolean {
+        // Here you can compare the signatures using the corresponding method of the Signature object.
+        // Or use a custom method to determine if the signatures match
+        // For example, you can use MessageDigest to get the SHA-1 hash of the signature and then compare it.
+        // We are using SHA-256 for verifying signature
+
         // Create a MessageDigest instance for SHA-256
         val digest = MessageDigest.getInstance("SHA-256")
 
